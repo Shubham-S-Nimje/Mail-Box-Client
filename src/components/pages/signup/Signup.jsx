@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import './Signup.css';
 
 const Signup = () => {
   const EnteredUsername = useRef();
@@ -7,6 +8,7 @@ const Signup = () => {
   const EnteredPassword = useRef();
   const ConfirmPassword = useRef();
   const Nevigate = useNavigate();
+  const [ShowPass, SetShowpass] = useState('password');
 
   const SignupHandler = (event) => {
     event.preventDefault();
@@ -55,8 +57,17 @@ const Signup = () => {
     }
   };
 
+  const HidePasswordHandler = () => {
+    if(ShowPass === 'password'){
+      SetShowpass('text')
+    }
+    else{
+      SetShowpass('password')
+    }
+  }
+
   return (
-    <div className="signin">
+    <div className="signup">
       <h2>SignUp</h2>
       <form onSubmit={SignupHandler}>
         <div>
@@ -73,7 +84,15 @@ const Signup = () => {
         </div>
         <div>
           <label>Confirm Password : </label>
-          <input type="text" ref={ConfirmPassword} required></input>
+          <input type={ShowPass} ref={ConfirmPassword} required></input>
+        </div>
+
+        <div className="checkbox">
+          <input
+            type="checkbox"
+            onClick={HidePasswordHandler}
+          />
+          Show Password
         </div>
 
         <button type="submit">Signup</button>

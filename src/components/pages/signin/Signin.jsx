@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Signin.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -9,6 +9,7 @@ const Signin = () => {
   const EnteredPassword = useRef();
   const Nevigate = useNavigate();
   const dispatch = useDispatch()
+  const [ShowPass, SetShowpass] = useState('password');
 
   const SigninHandler = (event) => {
     event.preventDefault();
@@ -51,6 +52,15 @@ const Signin = () => {
     });
 };
 
+const HidePasswordHandler = () => {
+  if(ShowPass === 'password'){
+    SetShowpass('text')
+  }
+  else{
+    SetShowpass('password')
+  }
+}
+
   return (
     <div className="signin">
       <h2>SignIn</h2>
@@ -59,20 +69,27 @@ const Signin = () => {
           <label>Enter Email : </label>
           <input type="email"
           required
-          autoComplete="on"
           ref={EnteredUserEmail}
           ></input>
         </div>
         <div>
-          <label>Enter Passward : </label>
+          <label>Enter Password : </label>
           <input
-            type="text"
+            type={ShowPass}
             required
             ref={EnteredPassword}
           ></input>
         </div>
+        <div className="checkbox">
+          <input
+            type="checkbox"
+            onClick={HidePasswordHandler}
+          />
+          Show Password
+        </div>
 
         <button>Signin</button>
+        <Link to=''><p>Forgot Password</p></Link>
         <p>Don't have account?</p>
         <Link to="/signup">
           <button>Create new account</button>

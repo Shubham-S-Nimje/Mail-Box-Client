@@ -23,7 +23,7 @@ label {
     font-weight: bold;
 }
 
-input {
+.signin input {
     width: 20rem;
     height:fit-content;
     border-radius: 5px;
@@ -38,4 +38,23 @@ button {
     background-color: black;
     padding: 10px;
     cursor: pointer;
+}
+
+a p {
+    color: red;
+}
+
+p {
+    font-weight: bold;
+}
+
+.checkbox input {
+    background-color: aqua;
+    margin: 5px;
+    padding: 5px;
+    width: fit-content;
+}
+.checkbox {
+    font-weight: bold;
+    text-align: left;
 }
