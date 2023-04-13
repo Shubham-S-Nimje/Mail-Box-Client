@@ -3,6 +3,6 @@ import Signup from '../pages/signup/Signup';
 
 test('renders SignUp text', () => {
   render(<Signup/>);
-  const SignUpElement = screen.getByText(/SignUp/i);
+  const SignUpElement = screen.getByText('SignUp');
   expect(SignUpElement).toBeInTheDocument();
 });
