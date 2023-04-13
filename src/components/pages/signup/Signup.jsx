@@ -51,7 +51,7 @@ const Signup = () => {
         });
     }
     else{
-      console.log('Your Passward not Match')
+      alert('Oops!.. Your Passward not matching')
     }
   };
 

@@ -1,6 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialAuthState = { isAutenticate: false }
+const islogin = localStorage.getItem('localId')
+let initialAuthState = { isAutenticate: false }
+
+
+if(islogin === ''){
+    initialAuthState = { isAutenticate: false }
+}
+else{
+    initialAuthState = { isAutenticate: true }
+}
 
 const AuthSlice = createSlice({
     name: 'authstatechange',

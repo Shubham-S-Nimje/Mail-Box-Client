@@ -34,7 +34,7 @@ const Signin = () => {
       }
       else{
         return res.json().then((data) => {
-          let errorMessage = 'Authentication failed';
+          let errorMessage = 'Please Check Your Email/Password';
           throw new Error(errorMessage);
         });
       }
