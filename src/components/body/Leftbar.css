@@ -1,0 +1,15 @@
+.composemail {
+    background-color:rgb(228, 224, 224);
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.composemail button{
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: larger;
+}

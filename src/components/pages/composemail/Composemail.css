@@ -1,0 +1,35 @@
+.composemail{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.editor {
+    width:100%;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-style:solid;
+    border-width: thin;
+}
+
+.composemail form {
+    width: 80%;
+    text-align: start;
+}
+
+.composemail form button {
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+
+.composemail input{
+    font-size: larger;
+}
+
+.composemail textarea{
+    font-size:x-large
+}
+
