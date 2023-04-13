@@ -1,0 +1,16 @@
+.signin {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border-color: black;
+    border-radius: 10px;
+    border-style: solid;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
