@@ -5,7 +5,7 @@ import './Home.css'
 import Composemail from '../composemail/Composemail'
 import Leftbar from '../../body/Leftbar'
 import Inboxmails from '../inbox/Inboxmail.jsx'
-import Sentmails from '../sentmail/Sentmail'
+import Sentmails from '../sentmail/Sentmail.jsx'
 
 const Home = () => {
   const [Inboxmail, SetInboxmail] = useState(true);

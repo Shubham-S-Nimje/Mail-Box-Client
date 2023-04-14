@@ -24,6 +24,7 @@ const Composemail = (props) => {
     };
 
 
+    //User Sentmails
     fetch(
       `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}.json`,
       {
@@ -44,6 +45,25 @@ const Composemail = (props) => {
       .catch((err) => {
         alert(err.message);
       });
+
+      //All Sentmails
+      fetch(
+        'https://mail-box-client-6a44b-default-rtdb.firebaseio.com/sentmails.json',
+        {
+          method: "POST",
+          body: JSON.stringify(maildata),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('sentmails',data);
+        })
+        .catch((err) => {
+          alert(err.message);
+        });
   };
   
   const [editorState, setEditorState] = useState(() =>
@@ -51,7 +71,7 @@ const Composemail = (props) => {
   const updateTextDescription = async (state) => {
     await setEditorState(state);
     const data = convertToRaw(editorState.getCurrentContent());
-    console.log(data)
+    // console.log(data.blocks, state)
   };
 
 

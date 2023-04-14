@@ -38,7 +38,7 @@ const Signup = () => {
             return res.json();
           } else {
             return res.json().then((data) => {
-              let errorMessage = "Authentication failed";
+              let errorMessage = "Email already exists";
               throw new Error(errorMessage);
             });
           }
@@ -80,7 +80,7 @@ const Signup = () => {
         </div>
         <div>
           <label>Enter Password : </label>
-          <input type="text" ref={EnteredPassword} required></input>
+          <input type="password" ref={EnteredPassword} required></input>
         </div>
         <div>
           <label>Confirm Password : </label>
