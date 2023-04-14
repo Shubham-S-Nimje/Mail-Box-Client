@@ -4,8 +4,6 @@ import Inboxmaildata from "./Inboxmaildata";
 
 const Inboxmails = () => {
   const [inboxEmails, SetinboxEmails] = useState([]);
-  const localId = localStorage.getItem("localId");
-  const email = localStorage.getItem("email");
 
   useEffect(() => {
     fetch(
