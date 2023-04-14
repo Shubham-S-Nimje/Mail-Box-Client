@@ -17,16 +17,21 @@ const Composemail = (props) => {
     const Enteredmailsubject = mailsubject.current.value;
     const Enteredmaildescribtion = maildescribtion.current.value;
 
+    const seen = 'unseen';
+
     const maildata = {
       Enteredsentmailto,
       Enteredmailsubject,
       Enteredmaildescribtion,
+      seen
     };
+
+    const nameReplace = Enteredsentmailto.replace(/@.*$/,"");
 
 
     //User Sentmails
     fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}.json`,
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`,
       {
         method: "POST",
         body: JSON.stringify(maildata),
@@ -39,16 +44,19 @@ const Composemail = (props) => {
       .then((data) => {
         console.log(data);
         props.Setcomposemail(false);
+        props.Setcomposemail(false);
         props.SetInboxmail(false);
         props.SetSentmail(true);
+        props.Setviewmail(false);
       })
       .catch((err) => {
         alert(err.message);
       });
 
+
       //All Sentmails
       fetch(
-        'https://mail-box-client-6a44b-default-rtdb.firebaseio.com/sentmails.json',
+        `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`,
         {
           method: "POST",
           body: JSON.stringify(maildata),

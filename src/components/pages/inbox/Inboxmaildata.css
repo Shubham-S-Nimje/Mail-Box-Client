@@ -1,4 +1,4 @@
-.inboxmails {
+.unseenmails {
   display: flex;
   background-color: rgb(228, 224, 224);
   margin: 10px;
@@ -7,6 +7,19 @@
   border-radius: 10px;
   font-weight: bold;
   justify-content: space-between;
+  cursor: pointer;
+}
+.seenmails {
+  display: flex;
+  border-style: solid;
+  border-color: rgb(228, 224, 224);
+  margin: 10px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  font-weight: bold;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .email {
@@ -26,6 +39,15 @@
   -webkit-box-orient: vertical;
 }
 
-.inboxmails button {
+.seenmails button {
     background-color: red;
+}
+
+.unseenmails button {
+  background-color: red;
+}
+
+.seen {
+  width: 4rem;
+  margin: 10px;
 }

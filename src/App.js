@@ -7,6 +7,7 @@ import Signup from './components/pages/signup/Signup';
 import Signin from './components/pages/signin/Signin';
 import Home from './components/pages/Home/Home';
 import NoPage from './components/pages/NoPage';
+import Viewmail from './components/pages/Home/Viewmail';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/signin' element={<Signin/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/body' element={<Body/>}/>
+      <Route path='/*' element={<Viewmail/>}/>
       <Route path='*' element={<NoPage/>}/>
       </Routes>
       </BrowserRouter>

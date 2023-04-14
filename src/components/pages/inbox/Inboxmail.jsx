@@ -4,16 +4,18 @@ import Inboxmaildata from "./Inboxmaildata";
 
 const Inboxmails = () => {
   const [inboxEmails, SetinboxEmails] = useState([]);
+  const email = localStorage.getItem("email");
+  const nameReplace = email.replace(/@.*$/,"");
 
   useEffect(() => {
     fetch(
-      'https://mail-box-client-6a44b-default-rtdb.firebaseio.com/sentmails.json'
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`
     )
       .then((res) => res.json())
       .then((data) => SetinboxEmails(data));
   }, []);
 
-  console.log(inboxEmails);
+  // console.log(inboxEmails);
 
   return (
     <div>
@@ -22,10 +24,14 @@ const Inboxmails = () => {
         Object.keys(inboxEmails).map((data, index) => {
           return (
             <Inboxmaildata
-              key={index}
-              inboxEmails={inboxEmails}
-              email={inboxEmails[data].Enteredsentmailto}
-              desc={inboxEmails[data].Enteredmaildescribtion}
+            key={index}
+            id={index}
+            seen={inboxEmails[data].seen}
+            inboxEmails={inboxEmails}
+            Useremail={data}
+            email={inboxEmails[data].Enteredsentmailto}
+            subject={inboxEmails[data].Enteredmailsubject}
+            desc={inboxEmails[data].Enteredmaildescribtion}
             />
           );
         })}

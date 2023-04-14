@@ -32,7 +32,7 @@ const Leftbar = (props) => {
         <div className='composemail'>
         <button
         onClick={InboxmailHandler}
-        >Inbox</button>
+        >Inbox({props.isUnseenmails}/{props.isseenmails+props.isUnseenmails})</button>
         </div>
 
         <div className='composemail'>

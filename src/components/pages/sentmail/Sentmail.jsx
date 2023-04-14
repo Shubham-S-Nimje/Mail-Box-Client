@@ -5,9 +5,12 @@ import Sentmaildata from "./Sentmaildata";
 const Sentmails = () => {
   const [sentEmails,SetsentEmails] = useState([])
   const localId = localStorage.getItem('localId')
+  const email = localStorage.getItem('email')
+
+  // const nameReplace = email.replace(/@.*$/,"");
 
   useEffect(()=> {
-    fetch(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}.json`)
+    fetch(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`)
   .then(res => res.json())
   .then(data => SetsentEmails(data))
   },[])
