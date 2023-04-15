@@ -16,7 +16,6 @@ const Inboxmaildata = (props) => {
   const dispatch = useDispatch();
   const isseenmails = useSelector((state) => state.seenunseenmails.isSeen);
   const isUnseenmails = useSelector((state) => state.seenunseenmails.isUnseen);
-  const isData = useSelector((state) => state.seenunseenmails.data);
 
   // console.log(props.Useremail[props.id])
 
@@ -56,6 +55,7 @@ const Inboxmaildata = (props) => {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
+        dispatch(SeenMailsAction.unseenclicked());
       })
       .catch((err) => {
         alert(err.message);
@@ -68,13 +68,21 @@ const Inboxmaildata = (props) => {
     } else {
       Setunseen("unseenmails");
     }
-  }, [props.seen]);
+  }, []);
 
   useEffect(() => {
     if (props.email === email) {
       Setcheckmail(true);
     } else {
       Setcheckmail(false);
+    }
+
+    if (isseenmails === 0 || isUnseenmails === 0) {
+      if (props.seen === "seen") {
+        dispatch(SeenMailsAction.seen());
+      } else {
+        dispatch(SeenMailsAction.unseen());
+      }
     }
   }, []);
 

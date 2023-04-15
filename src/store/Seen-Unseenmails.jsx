@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let initialAuthState = { isSeen: 0, isUnseen: 0, data: true }
+let initialAuthState = { isSeen: 0, isUnseen: 0 }
 
 const SeenMailsSlice = createSlice({
     name: 'seenunseenmails',
@@ -8,11 +8,13 @@ const SeenMailsSlice = createSlice({
     reducers : {
         seen(state) {
             state.isSeen++;
-            state.data = false;
         },
         unseen(state) {
             state.isUnseen++;
-            state.data = false;
+        },
+        unseenclicked(state) {
+            state.isSeen++;
+            state.isUnseen--;
         }
     }
 });

@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Inboxmail.css";
 import Inboxmaildata from "./Inboxmaildata";
-import { SeenMailsAction } from "../../../store/Seen-Unseenmails";
-import { useDispatch, useSelector } from "react-redux";
 
 const Inboxmails = (props) => {
   const [inboxEmails, SetinboxEmails] = useState();
   const email = localStorage.getItem("email");
   const nameReplace = email.replace(/@.*$/,"");
-  const dispatch = useDispatch();
-  const isData = useSelector((state) => state.seenunseenmails.data);
 
   setTimeout(() => {
     fetch(
@@ -19,14 +15,6 @@ const Inboxmails = (props) => {
       .then((data) => SetinboxEmails(data));
 
       // console.log('fetched')
-
-      if (isData) {
-        if (props.seen === "seen") {
-          dispatch(SeenMailsAction.seen());
-        } else {
-          dispatch(SeenMailsAction.unseen());
-        }
-      }
     
   }, 2000);
 
