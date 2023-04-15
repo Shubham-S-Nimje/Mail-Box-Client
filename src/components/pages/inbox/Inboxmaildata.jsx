@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Fragment } from 'react';
 import { useEffect } from 'react';
 import { createSearchParams, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SeenMailsAction } from '../../../store/Seen-Unseenmails';
 
 const Inboxmaildata = (props) => {
@@ -13,25 +13,10 @@ const Inboxmaildata = (props) => {
   const [unseen, Setunseen] = useState();
   const email = localStorage.getItem("email");
   const localId = localStorage.getItem("localId");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const isseenmails = useSelector(state => state.seenunseenmails.isSeen)
+  const isUnseenmails = useSelector(state => state.seenunseenmails.isUnseen)
 
-  useEffect(()=> {
-    if(props.seen === 'seen'){
-      dispatch(SeenMailsAction.seen());
-    }
-    else{
-      dispatch(SeenMailsAction.unseen());
-    }
-  },[dispatch])
-
-  useEffect(()=> {
-    if(props.email === email){
-      Setcheckmail(true)
-    }
-    else{
-      Setcheckmail(false)
-    }
-  },[])
 
   // console.log(props.Useremail[props.id])
 
@@ -43,7 +28,7 @@ const Inboxmaildata = (props) => {
     emailid: `${props.Useremail}`
   }).toString()
 })
-    // console.log(props.Useremail)
+    console.log(props.desc)
 
     const Enteredsentmailto = props.email
     const Enteredmailsubject = props.subject
@@ -84,7 +69,26 @@ const Inboxmaildata = (props) => {
     else{
       Setunseen('unseenmails')
     }
-  },[])
+  },[props.seen])
+
+  useEffect(()=> {
+    if(props.email === email){
+      Setcheckmail(true)
+    }
+    else{
+      Setcheckmail(false)
+    }
+
+    if(isseenmails === 0 || isUnseenmails === 0){
+
+      if(props.seen === 'seen'){
+        dispatch(SeenMailsAction.seen());
+      }
+      else{
+        dispatch(SeenMailsAction.unseen());
+      }
+  }
+  },[props.seen, props.email])
   
   return (
     <Fragment>

@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ViewmailData from './Viewmaildata';
+import { useNavigate } from 'react-router-dom';
+import './Viewmail.css'
 
 const Viewmail = (props) => {
     const [emaildata] = useSearchParams()
     const Useremail = emaildata.get("emailid");
     const email = localStorage.getItem("email");
     const nameReplace = email.replace(/@.*$/,"");
+    const Navigate = useNavigate();
     
     // console.log(Useremail)
     
@@ -21,9 +24,16 @@ const Viewmail = (props) => {
       .then((data) => SetinboxEmails(data));
   }, []);
 
+  const OnBackclickHandler = () => {
+    Navigate('/')
+  }
+
   return (
-    <div>
-      <h2 className="inboxmail">View Mail</h2>
+    <div className="viewmail">
+      <button
+      onClick={OnBackclickHandler}
+      >Back</button>
+      <h2>View Mail</h2>
       {inboxEmails &&
         Object.keys(inboxEmails).map((data, index) => {
           return (

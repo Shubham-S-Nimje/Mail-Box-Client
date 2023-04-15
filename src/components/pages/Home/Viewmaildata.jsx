@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Fragment } from 'react';
 import { useEffect } from 'react';
-import Leftbar from '../../body/Leftbar';
+import './Viewmaildata.css'
 
 const ViewmailData = (props) => {
   const [checkmail, Setcheckmail] = useState(false)
@@ -17,13 +17,15 @@ const ViewmailData = (props) => {
   },[])
 
   // console.log(props.Useremail[props.id])
+
+  
  
   return (
     <Fragment>
-    {checkmail && <div className='inboxmails'>
-    <div className='email'>{props.email}</div>
-    <div className='subject'>{props.subject}</div>
-    <div className='describtion'>{props.desc}</div>
+    {checkmail && <div className='viewmails'>
+    <div className='email'>Email : {props.email}</div>
+    <div className='subject'>Subject : {props.subject}</div>
+    <div className='describtion'>Describtion : {props.desc}</div>
     </div>}
     </Fragment>
   )

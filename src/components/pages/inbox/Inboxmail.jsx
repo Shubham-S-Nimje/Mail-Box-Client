@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Inboxmail.css";
 import Inboxmaildata from "./Inboxmaildata";
 
-const Inboxmails = () => {
-  const [inboxEmails, SetinboxEmails] = useState([]);
+const Inboxmails = (props) => {
+  const [inboxEmails, SetinboxEmails] = useState();
   const email = localStorage.getItem("email");
   const nameReplace = email.replace(/@.*$/,"");
 

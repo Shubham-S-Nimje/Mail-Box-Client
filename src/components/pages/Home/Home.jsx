@@ -17,7 +17,7 @@ const Home = () => {
   const isseenmails = useSelector(state => state.seenunseenmails.isSeen)
   const isUnseenmails = useSelector(state => state.seenunseenmails.isUnseen)
 
-  console.log(isseenmails,isUnseenmails)
+  // console.log(isseenmails,isUnseenmails)
   
   return (
     <Fragment>

@@ -2,32 +2,36 @@ import React, { useRef, useState } from "react";
 import "./Composemail.css";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import { EditorState, convertToRaw } from "draft-js";
 
 const Composemail = (props) => {
   const sentmailto = useRef();
   const mailsubject = useRef();
-  const maildescribtion = useRef();
+  const [Entereddescription, setEntereddescription] = useState('');
 
   const localId = localStorage.getItem("localId");
+
+  const updateTextDescription = (event) => {
+    setEntereddescription(event.blocks[0].text);
+    
+  };
 
   const SentmailHandler = (event) => {
     event.preventDefault();
     const Enteredsentmailto = sentmailto.current.value;
     const Enteredmailsubject = mailsubject.current.value;
-    const Enteredmaildescribtion = maildescribtion.current.value;
+    // const Enteredmaildescribtion = maildescribtion.current.value;
+    const Enteredmaildescribtion = Entereddescription;
 
-    const seen = 'unseen';
+    const seen = "unseen";
 
     const maildata = {
       Enteredsentmailto,
       Enteredmailsubject,
       Enteredmaildescribtion,
-      seen
+      seen,
     };
 
-    const nameReplace = Enteredsentmailto.replace(/@.*$/,"");
-
+    const nameReplace = Enteredsentmailto.replace(/@.*$/, "");
 
     //User Sentmails
     fetch(
@@ -53,35 +57,28 @@ const Composemail = (props) => {
         alert(err.message);
       });
 
-
-      //All Sentmails
-      fetch(
-        `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`,
-        {
-          method: "POST",
-          body: JSON.stringify(maildata),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log('sentmails',data);
-        })
-        .catch((err) => {
-          alert(err.message);
-        });
+    //All Sentmails
+    fetch(
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`,
+      {
+        method: "POST",
+        body: JSON.stringify(maildata),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("sentmails", data);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
+
   
-  const [editorState, setEditorState] = useState(() =>
-  EditorState.createEmpty());
-  const updateTextDescription = async (state) => {
-    await setEditorState(state);
-    const data = convertToRaw(editorState.getCurrentContent());
-    // console.log(data.blocks, state)
-  };
-
+console.log(Entereddescription)
 
   return (
     <div className="composemail">
@@ -98,9 +95,8 @@ const Composemail = (props) => {
         <div className="text">
           <Editor
             type="text"
-            editorState={editorState}
-onEditorStateChange={updateTextDescription}
-            ref={maildescribtion}
+            value={Entereddescription}
+            onChange={updateTextDescription}
             editorClassName="editor"
             required
           />
