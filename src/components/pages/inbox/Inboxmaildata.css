@@ -1,9 +1,13 @@
+.emaildata {
+  display: flex;
+}
+
 .unseenmails {
   display: flex;
   background-color: rgb(228, 224, 224);
   margin: 10px;
   padding: 10px;
-  width: fit-content;
+  /* width: fit-content; */
   border-radius: 10px;
   font-weight: bold;
   justify-content: space-between;
@@ -15,19 +19,11 @@
   border-color: rgb(228, 224, 224);
   margin: 10px;
   padding: 10px;
-  width: fit-content;
+  /* width: fit-content; */
   border-radius: 10px;
   font-weight: bold;
   justify-content: space-between;
   cursor: pointer;
-}
-
-.email {
-  margin: 10px;
-  width: 10rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  -webkit-box-orient: vertical;
 }
 
 .describtion {
@@ -50,4 +46,12 @@
 .seen {
   width: 3rem;
   margin: 10px;
+}
+
+.email {
+  margin: 10px;
+  /* width: fit-content; */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }

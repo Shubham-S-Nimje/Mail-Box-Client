@@ -17,8 +17,6 @@ const ViewmailData = (props) => {
   },[])
 
   // console.log(props.Useremail[props.id])
-
-  
  
   return (
     <Fragment>
