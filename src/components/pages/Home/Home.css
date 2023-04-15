@@ -12,6 +12,7 @@
     padding: 20px;
     margin: 10px;
     width: 100%;
+    height: fit-content;
 }
 
 .homeleft {

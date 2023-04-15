@@ -6,7 +6,6 @@ const Sentmaildata = (props) => {
     <div className='sentmails'>
     <div className='email'>{props.email}</div>
     <div className='describtion'>{props.desc}</div>
-    <button>Remove</button>
     </div>
   )
 }
