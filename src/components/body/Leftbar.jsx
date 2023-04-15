@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react'
 import './Leftbar.css'
+import { useSelector } from 'react-redux'
 const Leftbar = (props) => {
+  const isseenmails = useSelector(state => state.seenunseenmails.isSeen)
+  const isUnseenmails = useSelector(state => state.seenunseenmails.isUnseen)
+
     const ComposemailHandler = (event) => {
         event.preventDefault();
         props.Setcomposemail(true)
@@ -32,7 +36,7 @@ const Leftbar = (props) => {
         <div className='composemail'>
         <button
         onClick={InboxmailHandler}
-        >Inbox ({props.isUnseenmails}/{props.isseenmails+props.isUnseenmails})</button>
+        >Inbox ({isUnseenmails}/{isseenmails+isUnseenmails})</button>
         </div>
 
         <div className='composemail'>

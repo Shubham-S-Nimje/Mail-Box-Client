@@ -14,8 +14,6 @@ const Home = () => {
   const [composemail, Setcomposemail] = useState(false);
   const [viewmail, Setviewmail] = useState(false);
   const isauth = useSelector(state => state.auth.isAutenticate)
-  const isseenmails = useSelector(state => state.seenunseenmails.isSeen)
-  const isUnseenmails = useSelector(state => state.seenunseenmails.isUnseen)
 
   // console.log(isseenmails,isUnseenmails)
   
@@ -24,8 +22,6 @@ const Home = () => {
     {isauth && <div className='home'>
     <div className='homeleft'>
       <Leftbar 
-      isseenmails={isseenmails}
-      isUnseenmails={isUnseenmails}
       Setcomposemail={Setcomposemail}
       SetInboxmail={SetInboxmail}
       SetSentmail={SetSentmail}

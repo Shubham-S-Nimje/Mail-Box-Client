@@ -78,7 +78,7 @@ const Composemail = (props) => {
   };
 
   
-console.log(Entereddescription)
+// console.log(Entereddescription)
 
   return (
     <div className="composemail">

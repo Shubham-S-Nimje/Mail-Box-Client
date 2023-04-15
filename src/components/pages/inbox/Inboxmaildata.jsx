@@ -76,14 +76,6 @@ const Inboxmaildata = (props) => {
     } else {
       Setcheckmail(false);
     }
-
-    if (isData) {
-      if (props.seen === "seen") {
-        dispatch(SeenMailsAction.seen());
-      } else {
-        dispatch(SeenMailsAction.unseen());
-      }
-    }
   }, []);
 
   const OnRemoveHandler = () => {
