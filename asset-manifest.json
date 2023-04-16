@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Shubham-S-Nimje/Dynamic-Styling/static/css/main.eaacab5b.css",
+    "main.js": "/Shubham-S-Nimje/Dynamic-Styling/static/js/main.593fd9c8.js",
+    "static/js/787.6c9c1176.chunk.js": "/Shubham-S-Nimje/Dynamic-Styling/static/js/787.6c9c1176.chunk.js",
+    "index.html": "/Shubham-S-Nimje/Dynamic-Styling/index.html",
+    "main.eaacab5b.css.map": "/Shubham-S-Nimje/Dynamic-Styling/static/css/main.eaacab5b.css.map",
+    "main.593fd9c8.js.map": "/Shubham-S-Nimje/Dynamic-Styling/static/js/main.593fd9c8.js.map",
+    "787.6c9c1176.chunk.js.map": "/Shubham-S-Nimje/Dynamic-Styling/static/js/787.6c9c1176.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaacab5b.css",
+    "static/js/main.593fd9c8.js"
+  ]
+}
