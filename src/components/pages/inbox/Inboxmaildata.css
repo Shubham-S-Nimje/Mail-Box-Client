@@ -43,9 +43,24 @@
   background-color: red;
 }
 
-.seen {
-  width: 3rem;
+.greenborder {
+  width: 4rem;
   margin: 10px;
+  border-style: solid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-color: green;
+}
+
+.redborder {
+  width: 4rem;
+  margin: 10px;
+  border-style: solid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-color: red;
 }
 
 .email {

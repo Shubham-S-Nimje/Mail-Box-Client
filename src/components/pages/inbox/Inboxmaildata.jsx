@@ -11,6 +11,7 @@ const Inboxmaildata = (props) => {
   const Nevigate = useNavigate();
   const [checkmail, Setcheckmail] = useState(false);
   const [unseen, Setunseen] = useState();
+  const [unseenborder, Setunseenborder] = useState();
   const email = localStorage.getItem("email");
   const localId = localStorage.getItem("localId");
   const dispatch = useDispatch();
@@ -65,8 +66,10 @@ const Inboxmaildata = (props) => {
   useEffect(() => {
     if (props.seen === "seen") {
       Setunseen("seenmails");
+      Setunseenborder("greenborder");
     } else {
       Setunseen("unseenmails");
+      Setunseenborder("redborder");
     }
   }, []);
 
@@ -112,7 +115,7 @@ const Inboxmaildata = (props) => {
       {checkmail && (
         <div className={unseen}>
           <div className="emaildata" onClick={EmailViewHandler}>
-            <div className="seen">{props.seen}</div>
+            <div className={unseenborder}>{props.seen}</div>
             <div className="email">{props.email}</div>
             <div className="describtion">{props.desc}</div>
           </div>
