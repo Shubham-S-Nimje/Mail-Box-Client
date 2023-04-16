@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import ViewmailData from './Viewmaildata';
 import { useNavigate } from 'react-router-dom';
 import './Viewmail.css'
+import useFetchdata from '../../../store/Fetchdata';
 
 const Viewmail = (props) => {
     const [emaildata] = useSearchParams()
@@ -14,15 +15,22 @@ const Viewmail = (props) => {
     const Navigate = useNavigate();
     
     // console.log(Useremail)
-    
     const [inboxEmails, SetinboxEmails] = useState([]);
+
+    const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`)
+  // console.log(data)
+
   useEffect(() => {
-    fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`
-    )
-      .then((res) => res.json())
-      .then((data) => SetinboxEmails(data));
-  }, []);
+    SetinboxEmails(data)
+  }, [data]);
+
+  // useEffect(() => {
+  //   fetch(
+  //     `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => SetinboxEmails(data));
+  // }, []);
 
   const OnBackclickHandler = () => {
     Navigate('/')

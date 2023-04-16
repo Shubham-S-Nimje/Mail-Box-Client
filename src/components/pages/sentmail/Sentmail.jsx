@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
 import './Sentmail.css'
 import Sentmaildata from "./Sentmaildata";
+import useFetchdata from "../../../store/Fetchdata";
 
 const Sentmails = () => {
   const [sentEmails,SetsentEmails] = useState([])
   const localId = localStorage.getItem('localId')
   // const email = localStorage.getItem('email')
-
   // const nameReplace = email.replace(/@.*$/,"");
 
-  useEffect(()=> {
-    fetch(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`)
-  .then(res => res.json())
-  .then(data => SetsentEmails(data))
-  },[localId])
+  const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`)
+  // console.log(data)
+
+  useEffect(() => {
+    SetsentEmails(data)
+  }, [data]);
+
+  // useEffect(()=> {
+  //   fetch(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`)
+  // .then(res => res.json())
+  // .then(data => SetsentEmails(data))
+  // },[localId])
   
   // console.log(sentEmails)
 

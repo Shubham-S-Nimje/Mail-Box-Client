@@ -1,22 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Inboxmail.css";
 import Inboxmaildata from "./Inboxmaildata";
+import useFetchdata from "../../../store/Fetchdata";
 
 const Inboxmails = (props) => {
   const [inboxEmails, SetinboxEmails] = useState();
   const email = localStorage.getItem("email");
   const nameReplace = email.replace(/@.*$/,"");
 
-  setTimeout(() => {
-    fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`
-    )
-      .then((res) => res.json())
-      .then((data) => SetinboxEmails(data));
+    const [newdata] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`)
+    // console.log(newdata)
 
-      // console.log('fetched')
-    
-  }, 2000);
+    useEffect(() => {
+      SetinboxEmails(newdata)
+    }, [newdata]);
+
+  // setTimeout(() => {
+    // fetch(
+    //   `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`
+    // )
+    //   .then((res) => res.json())
+    //   .then((data) => SetinboxEmails(data));
+
+      // console.log(newdata)
+  // }, 2000);
 
   // useEffect(() => {
   //   fetch(
