@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Dynamic-Styling/static/css/main.eaacab5b.css",
-    "main.js": "/Dynamic-Styling/static/js/main.f2bdbd70.js",
-    "static/js/787.6c9c1176.chunk.js": "/Dynamic-Styling/static/js/787.6c9c1176.chunk.js",
-    "index.html": "/Dynamic-Styling/index.html",
-    "main.eaacab5b.css.map": "/Dynamic-Styling/static/css/main.eaacab5b.css.map",
-    "main.f2bdbd70.js.map": "/Dynamic-Styling/static/js/main.f2bdbd70.js.map",
-    "787.6c9c1176.chunk.js.map": "/Dynamic-Styling/static/js/787.6c9c1176.chunk.js.map"
+    "main.css": "/Mail-Box-Client/static/css/main.eaacab5b.css",
+    "main.js": "/Mail-Box-Client/static/js/main.551523d3.js",
+    "static/js/787.6c9c1176.chunk.js": "/Mail-Box-Client/static/js/787.6c9c1176.chunk.js",
+    "index.html": "/Mail-Box-Client/index.html",
+    "main.eaacab5b.css.map": "/Mail-Box-Client/static/css/main.eaacab5b.css.map",
+    "main.551523d3.js.map": "/Mail-Box-Client/static/js/main.551523d3.js.map",
+    "787.6c9c1176.chunk.js.map": "/Mail-Box-Client/static/js/787.6c9c1176.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eaacab5b.css",
-    "static/js/main.f2bdbd70.js"
+    "static/js/main.551523d3.js"
   ]
 }
