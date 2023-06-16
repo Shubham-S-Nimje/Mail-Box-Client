@@ -6,7 +6,7 @@ import useFetchdata from "../../../store/Fetchdata";
 const Inboxmails = (props) => {
   const [inboxEmails, SetinboxEmails] = useState();
   const email = localStorage.getItem("email");
-  const nameReplace = email.replace(/@.*$/,"");
+  const nameReplace = email && email.replace(/@.*$/,"");
 
     const [newdata] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`)
     // console.log(newdata)

@@ -33,7 +33,7 @@ const Viewmail = (props) => {
   // }, []);
 
   const OnBackclickHandler = () => {
-    Navigate('/')
+    Navigate('/Mail-Box-Client/')
   }
 
   return (

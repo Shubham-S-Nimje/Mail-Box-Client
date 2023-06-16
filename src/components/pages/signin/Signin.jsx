@@ -41,7 +41,7 @@ const Signin = () => {
       }
     }).then((data) => {
       console.log(data);
-      Nevigate('/')
+      Nevigate('/Mail-Box-Client')
       localStorage.setItem('localId',data.localId)
       localStorage.setItem('idToken',data.idToken)
       localStorage.setItem('email',data.email)
@@ -91,7 +91,7 @@ const HidePasswordHandler = () => {
         <button>Signin</button>
         <Link to=''><p>Forgot Password</p></Link>
         <p>Don't have account?</p>
-        <Link to="/signup">
+        <Link to="/Mail-Box-Client/signup">
           <button>Create new account</button>
         </Link>
       </form>

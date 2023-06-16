@@ -20,11 +20,11 @@ const Inboxmaildata = (props) => {
 
   // console.log(props.Useremail[props.id])
 
-  const nameReplace = email.replace(/@.*$/, "");
+  const nameReplace = email && email.replace(/@.*$/, "");
 
   const EmailViewHandler = () => {
     Nevigate({
-      pathname: `/${localId}`,
+      pathname: `/Mail-Box-Client/${localId}`,
       search: createSearchParams({
         emailid: `${props.Useremail}`,
       }).toString(),
@@ -71,7 +71,7 @@ const Inboxmaildata = (props) => {
       Setunseen("unseenmails");
       Setunseenborder("redborder");
     }
-  }, []);
+  }, [EmailViewHandler]);
 
   useEffect(() => {
     if (props.email === email) {
@@ -104,6 +104,8 @@ const Inboxmaildata = (props) => {
       .then((res) => res.json())
       .then((data) => {
         console.log('Email Deleted Successfully!..');
+        window.location.reload(true);
+
       })
       .catch((err) => {
         alert(err.message);

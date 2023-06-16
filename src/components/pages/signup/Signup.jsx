@@ -45,7 +45,7 @@ const Signup = () => {
         })
         .then((data) => {
           console.log(data);
-          Nevigate("/signin");
+          Nevigate("/Mail-Box-Client/signin");
           console.log("User signup Successfully");
         })
         .catch((err) => {
@@ -97,7 +97,7 @@ const Signup = () => {
 
         <button type="submit">Signup</button>
         <p>Already have account?</p>
-        <Link to="/signin">
+        <Link to="/Mail-Box-Client/signin">
           <button>Login to existing account</button>
         </Link>
       </form>

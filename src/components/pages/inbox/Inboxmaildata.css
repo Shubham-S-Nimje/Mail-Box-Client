@@ -1,5 +1,6 @@
 .emaildata {
   display: flex;
+  width:80%;
 }
 
 .unseenmails {

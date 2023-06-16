@@ -1,8 +1,8 @@
 {
-  "homepage": "https://Shubham-S-Nimje.github.io/Dynamic-Styling",
+  "homepage": "https://Shubham-S-Nimje.github.io/Mail-Box-Client",
   "name": "mail-box-client",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
