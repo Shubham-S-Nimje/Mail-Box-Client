@@ -90,7 +90,7 @@ const Inboxmaildata = (props) => {
   }, []);
 
   const OnRemoveHandler = () => {
-    console.log(props.Useremail);
+    // console.log(props.Useremail);
 
     fetch(
       `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}/${props.Useremail}.json`,
@@ -103,7 +103,7 @@ const Inboxmaildata = (props) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log('Email Deleted Successfully!..');
+        // console.log('Email Deleted Successfully!..');
         window.location.reload(true);
 
       })

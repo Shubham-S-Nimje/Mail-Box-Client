@@ -44,9 +44,9 @@ const Signup = () => {
           }
         })
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           Nevigate("/Mail-Box-Client/signin");
-          console.log("User signup Successfully");
+          // console.log("User signup Successfully");
         })
         .catch((err) => {
           alert(err.message);

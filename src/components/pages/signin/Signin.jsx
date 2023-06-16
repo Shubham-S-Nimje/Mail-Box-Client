@@ -45,7 +45,7 @@ const Signin = () => {
       localStorage.setItem('localId',data.localId)
       localStorage.setItem('idToken',data.idToken)
       localStorage.setItem('email',data.email)
-      console.log('User signin Successfully')
+      // console.log('User signin Successfully')
       dispatch(authActions.login());
     }).catch(err => {
       alert(err.message);

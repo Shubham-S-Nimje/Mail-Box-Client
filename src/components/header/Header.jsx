@@ -20,7 +20,7 @@ const Header = () => {
       localStorage.setItem('localId','')
       localStorage.setItem('idToken','')
       localStorage.setItem('email','')
-      console.log('User signout Successfully')
+      // console.log('User signout Successfully')
     dispatch(authActions.logout());
   }
 
