@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Mail-Box-Client/static/css/main.9361f077.css",
-    "main.js": "/Mail-Box-Client/static/js/main.61dc2ec4.js",
+    "main.js": "/Mail-Box-Client/static/js/main.0424b5ec.js",
     "static/js/787.6c9c1176.chunk.js": "/Mail-Box-Client/static/js/787.6c9c1176.chunk.js",
     "index.html": "/Mail-Box-Client/index.html",
     "main.9361f077.css.map": "/Mail-Box-Client/static/css/main.9361f077.css.map",
-    "main.61dc2ec4.js.map": "/Mail-Box-Client/static/js/main.61dc2ec4.js.map",
+    "main.0424b5ec.js.map": "/Mail-Box-Client/static/js/main.0424b5ec.js.map",
     "787.6c9c1176.chunk.js.map": "/Mail-Box-Client/static/js/787.6c9c1176.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9361f077.css",
-    "static/js/main.61dc2ec4.js"
+    "static/js/main.0424b5ec.js"
   ]
 }
