@@ -4,7 +4,7 @@ const islogin = localStorage.getItem('localId')
 let initialAuthState = { isAutenticate: false }
 
 
-if(islogin === ''){
+if(islogin === '' || !islogin){
     initialAuthState = { isAutenticate: false }
 }
 else{

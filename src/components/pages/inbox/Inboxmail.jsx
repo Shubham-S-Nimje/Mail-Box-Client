@@ -8,8 +8,14 @@ const Inboxmails = (props) => {
   const email = localStorage.getItem("email");
   const nameReplace = email && email.replace(/@.*$/,"");
 
-    const [newdata] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`)
-    // console.log(newdata)
+  const [newdata] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}.json`);
+
+  useEffect(() => {
+    if (newdata) {
+      const totalMails = Object.keys(newdata).length;
+      localStorage.setItem("totalmails", totalMails.toString());
+    }
+  }, [newdata]);
 
     useEffect(() => {
       SetinboxEmails(newdata)
@@ -33,7 +39,9 @@ const Inboxmails = (props) => {
   //     .then((data) => SetinboxEmails(data));
   // }, []);
 
-  // console.log(inboxEmails);
+  // console.log(newdata);
+  newdata && localStorage.setItem('unseenCount',Object.values(newdata).filter((item) => item.seen === "unseen").length)
+// console.log(unseenCount); // Output: 1
 
   return (
     <div>

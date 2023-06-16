@@ -17,7 +17,7 @@ const Viewmail = (props) => {
     // console.log(Useremail)
     const [inboxEmails, SetinboxEmails] = useState([]);
 
-    const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`)
+    const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}.json`)
   // console.log(data)
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Viewmail = (props) => {
   // }, []);
 
   const OnBackclickHandler = () => {
-    Navigate('/Mail-Box-Client/')
+    Navigate('/Mail-Box-Client')
   }
 
   return (

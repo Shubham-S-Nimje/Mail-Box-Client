@@ -9,7 +9,7 @@ const Sentmails = () => {
   // const email = localStorage.getItem('email')
   // const nameReplace = email.replace(/@.*$/,"");
 
-  const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`)
+  const [data] = useFetchdata(`https://mail-box-client-6a44b-default-rtdb.firebaseio.com/sentmails/${localId}.json`)
   // console.log(data)
 
   useEffect(() => {

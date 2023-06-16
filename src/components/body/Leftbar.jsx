@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 const Leftbar = (props) => {
   const isseenmails = useSelector(state => state.seenunseenmails.isSeen)
   const isUnseenmails = useSelector(state => state.seenunseenmails.isUnseen)
-
+  const totalmails = localStorage.getItem('totalmails')
 
     const ComposemailHandler = (event) => {
         event.preventDefault();
@@ -37,7 +37,7 @@ const Leftbar = (props) => {
         <div className='composemail'>
         <button
         onClick={InboxmailHandler}
-        >Inbox ({isUnseenmails}/{isseenmails+isUnseenmails})</button>
+        >Inbox ({isUnseenmails - 1}/{totalmails-1})</button>
         </div>
 
         <div className='composemail'>

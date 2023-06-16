@@ -44,7 +44,7 @@ const Inboxmaildata = (props) => {
     };
 
     fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail/${props.Useremail}.json`,
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}/${props.Useremail}.json`,
       {
         method: "PUT",
         body: JSON.stringify(maildata),
@@ -93,7 +93,7 @@ const Inboxmaildata = (props) => {
     console.log(props.Useremail);
 
     fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail/${props.Useremail}.json`,
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}/${props.Useremail}.json`,
       {
         method: "DELETE",
         headers: {

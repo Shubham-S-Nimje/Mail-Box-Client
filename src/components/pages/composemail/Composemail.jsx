@@ -9,6 +9,7 @@ const Composemail = (props) => {
   const [Entereddescription, setEntereddescription] = useState('');
 
   const localId = localStorage.getItem("localId");
+  const Email = localStorage.getItem("email");
 
   const updateTextDescription = (event) => {
     setEntereddescription(event.blocks[0].text);
@@ -32,10 +33,11 @@ const Composemail = (props) => {
     };
 
     const nameReplace = Enteredsentmailto.replace(/@.*$/, "");
+    // console.log(nameReplace)
 
-    //User Sentmails
+    
     fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${localId}sentmail.json`,
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/sentmails/${localId}.json`,
       {
         method: "POST",
         body: JSON.stringify(maildata),
@@ -46,7 +48,7 @@ const Composemail = (props) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         props.Setcomposemail(false);
         props.Setcomposemail(false);
         props.SetInboxmail(false);
@@ -57,9 +59,9 @@ const Composemail = (props) => {
         alert(err.message);
       });
 
-    //All Sentmails
+    
     fetch(
-      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/${nameReplace}receivedmail.json`,
+      `https://mail-box-client-6a44b-default-rtdb.firebaseio.com/receivedmails/${nameReplace}.json`,
       {
         method: "POST",
         body: JSON.stringify(maildata),
@@ -70,7 +72,7 @@ const Composemail = (props) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log("sentmails", data);
+        // console.log("sentmails", data);
       })
       .catch((err) => {
         alert(err.message);
