@@ -83,8 +83,10 @@ const Composemail = (props) => {
 // console.log(Entereddescription)
 
   return (
+    <>
+    <h2>Compose Mail</h2>
     <div className="composemail">
-      <h2>Compose Mail</h2>
+      
       <form onSubmit={SentmailHandler}>
         <div>
           <label>To : </label>
@@ -107,6 +109,7 @@ const Composemail = (props) => {
         <button type="submit">Send</button>
       </form>
     </div>
+    </>
   );
 };
 

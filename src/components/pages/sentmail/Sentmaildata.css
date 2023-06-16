@@ -1,31 +1,67 @@
-.sentmails {
+.unseenmails {
   display: flex;
-  background-color: rgb(228, 224, 224);
-  margin: 10px;
-  padding: 10px;
-  /* width: fit-content; */
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(219, 218, 218);
+}
+
+.seenmails {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
   justify-content: space-between;
 }
-
-.sentmails.email {
-  margin: 10px;
-  width: 5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  -webkit-box-orient: vertical;
-}
-
-.sentmails .describtion {
-  width: 60rem;
-  margin: 10px;
+.emaildata {
+  align-items: center;
+  width: 60%;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+@media (min-width: 767px) {
+.emaildata {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
 }
 
-.sentmails button {
-    background-color: red;
+.greenborder{
+  flex-basis: 10%;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  color: green;
+  width: 30%;
+  text-align: center;
 }
+.redborder{
+  flex-basis: 10%;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  width: 30%;
+  text-align: center;
+}
+
+.unseenmails button{
+  flex-basis: 10%;
+  padding: 4px;
+  margin: 0px;
+  background-color: red;
+}
+

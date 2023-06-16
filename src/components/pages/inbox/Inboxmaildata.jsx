@@ -114,17 +114,18 @@ const Inboxmaildata = (props) => {
 
   return (
     <Fragment>
-      {checkmail && (
-        <div className={unseen}>
-          <div className="emaildata" onClick={EmailViewHandler}>
-            <div className={unseenborder}>{props.seen}</div>
-            <div className="email">{props.email}</div>
-            <div className="describtion">{props.desc}</div>
-          </div>
-          <button onClick={OnRemoveHandler}>Remove</button>
-        </div>
-      )}
-    </Fragment>
+  {checkmail && (
+    <div className={unseen ? "unseenmails" : "seenmails"} onClick={EmailViewHandler}>
+      <div className={unseen ? "greenborder" : "redborder"}>{props.seen}</div>
+      <div className="emaildata">
+        <div className="email">From: {props.email}</div>
+        <div className="describtion"> - {props.desc}</div>
+      </div>
+      <div className="removebutton"><button onClick={OnRemoveHandler}>X</button></div>
+    </div>
+  )}
+</Fragment>
+
   );
 };
 

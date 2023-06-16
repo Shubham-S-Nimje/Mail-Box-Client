@@ -1,36 +1,51 @@
 .header {
-    background-color: black;
-    color:white;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: large;
-    align-items: baseline;
-    font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  align-items: baseline;
+  font-weight: bold;
 }
+
 .headerright {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header button {
-    margin: 0px 10px 0px 10px;
-    padding: 10px;
-    font-size: medium;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
+  margin: 0px 10px 0px 10px;
+  padding: 5px;
+  font-size: medium;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .header h3 {
-    color:white;
-    padding: 0px;
-    margin: 0px;
-    
+  color: white;
+  padding: 0px;
+  margin: 0px;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerright {
+    margin-top: 10px;
+  }
+
+  .header button {
+    margin: 5px;
+  }
 }

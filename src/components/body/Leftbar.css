@@ -1,15 +1,48 @@
-.composemail {
-    background-color:rgb(228, 224, 224);
-    border-radius: 10px;
-    font-weight: bold;
-    padding: 10px;
+.lcomposemail button {
+  border-radius: 10px;
+  font-weight: bold;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: smaller;
+  padding: 5px;
 }
 
-.composemail button{
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.lcomposemail {
+  flex-basis: 100%;
+  box-sizing: border-box;
+  background-color: rgb(228, 224, 224);
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (min-width: 769px) {
+  .lcomposemail {
+    flex-basis: 100%;
+    background-color: rgb(228, 224, 224);
     border-radius: 10px;
     font-weight: bold;
-    width: 100%;
-    background-color: white;
-    color: black;
-    font-size: larger;
+    padding: 4px;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lcomposemail {
+    flex-basis: 20%;
+    background-color: rgb(228, 224, 224);
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 4px;
+    margin: 2px;
+  }
 }

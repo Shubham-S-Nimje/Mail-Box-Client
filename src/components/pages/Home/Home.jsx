@@ -20,7 +20,7 @@ const Home = () => {
   
   return (
     <Fragment>
-    {isauth ? (<div className='home'>
+    {isauth && <div className='home'>
     <div className='homeleft'>
       <Leftbar 
       Setcomposemail={Setcomposemail}
@@ -43,7 +43,8 @@ const Home = () => {
         <div>{viewmail && <Viewmail
         />}</div>
       </div>
-    </div>) : (<Signin/>)}
+    </div>}
+    {!isauth && <Signin/>}
     </Fragment>
   )
 }

@@ -16,7 +16,7 @@ const Header = () => {
 
   const LogoutHandler = (event) => {
     event.preventDefault();
-    Navigate('/Mail-Box-Client/signin')
+    Navigate('/signin')
       localStorage.setItem('localId','')
       localStorage.setItem('idToken','')
       localStorage.setItem('email','')
@@ -32,7 +32,7 @@ return (
     <div className="headerright">
       {isAuth && <button>Profile</button>}
 
-  {!isAuth && <Link to="/Mail-Box-Client/signin">
+  {!isAuth && <Link to="/signin">
     <button
   // onClick={LoginHandler}
   >Login</button>
