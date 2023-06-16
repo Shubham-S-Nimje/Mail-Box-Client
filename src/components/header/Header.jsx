@@ -16,7 +16,7 @@ const Header = () => {
 
   const LogoutHandler = (event) => {
     event.preventDefault();
-    Navigate('/signin')
+    Navigate('/Mail-Box-Client/signin')
       localStorage.setItem('localId','')
       localStorage.setItem('idToken','')
       localStorage.setItem('email','')
