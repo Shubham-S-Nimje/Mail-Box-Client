@@ -11,9 +11,8 @@ const Viewmail = (props) => {
     const [emaildata] = useSearchParams()
     const Useremail = emaildata.get("emailid");
     const email = localStorage.getItem("email");
-    const nameReplace = email.replace(/@.*$/,"");
     const Navigate = useNavigate();
-    
+    const nameReplace = email && email.replace(/@.*$/,"");
     // console.log(Useremail)
     const [inboxEmails, SetinboxEmails] = useState([]);
 
