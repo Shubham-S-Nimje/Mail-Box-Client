@@ -11,9 +11,9 @@
 ### Web Application  
 - Developed a Mail Box client website using React.js library.
 
-User can view total unread mail and receive, send mails to another register users.
+- User can view total unread mail and receive, send mails to another register users.
 
-Used Redux for efficient state management, GitHub for version control.
+- Used Redux for efficient state management, GitHub for version control.
 Firebase authentication to ensure user security and storing data.  
   
 
