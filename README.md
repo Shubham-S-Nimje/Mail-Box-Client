@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<div align="center">
+<img src="https://shubham.nimje.co.in/p2.jpg" align="center" height="" width="500" />
+</div>  
+  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Mail Box  
+  
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### Web Application  
+- Developed a Mail Box client website using React.js library.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+User can view total unread mail and receive, send mails to another register users.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Used Redux for efficient state management, GitHub for version control.
+Firebase authentication to ensure user security and storing data.  
+  
 
-### `npm test`
+<br/>  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+</td><td valign="top" width="50%">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+</td></tr></table>  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br/>  
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Languages and Tools  
+<div align="center">  
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="25" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="25" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="25" /></a>  
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="25" /></a>  
+<a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="25" /></a>  
+<a href="https://redux.js.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="Redux" height="25" /></a>  
+<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="25" /></a>  
+</div>  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>  
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Github Stats  
+<table><tr><td valign="top" width="50%">
 
-### Analyzing the Bundle Size
+<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=Shubham-S-Nimje&show_icons=true&count_private=true&hide_border=true" align="center" style="width: 100%" /></div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+</td><td valign="top" width="50%">
 
-### Making a Progressive Web App
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shubham-S-Nimje&hide_border=true&layout=compact" align="left" style="width: 100%" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</td></tr></table>  
 
-### Advanced Configuration
+<br/>  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  
 
-### Deployment
+<br/>  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Profile views counter](https://komarev.com/ghpvc/?username=Shubham-S-Nimje&&style=flat-square)  
+  
 
-### `npm run build` fails to minify
+<br/>  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<br />
+
+----
+<div align="center">Copyright © 2023 NIMJE
+Designed by <a href="https://shubham.nimje.co.in/" target="_blank">Shubham S Nimje</a></div>
